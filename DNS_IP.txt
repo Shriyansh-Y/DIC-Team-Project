@@ -1,0 +1,3 @@
+NameNode -  ec2-52-40-46-82.us-west-2.compute.amazonaws.com	
+DataNode1 - ec2-35-162-236-42.us-west-2.compute.amazonaws.com	
+DataNode2 - ec2-34-215-193-101.us-west-2.compute.amazonaws.com	
