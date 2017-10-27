@@ -1,0 +1,334 @@
+2017-10-15 23:54:39,640 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting ResourceManager
+STARTUP_MSG:   host = ip-172-31-30-102/172.31.30.102
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 2.7.4
+STARTUP_MSG:   classpath = /usr/local/hadoop/etc/hadoop:/usr/local/hadoop/etc/hadoop:/usr/local/hadoop/etc/hadoop:/usr/local/hadoop/share/hadoop/common/lib/servlet-api-2.5.jar:/usr/local/hadoop/share/hadoop/common/lib/gson-2.2.4.jar:/usr/local/hadoop/share/hadoop/common/lib/stax-api-1.0-2.jar:/usr/local/hadoop/share/hadoop/common/lib/xz-1.0.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-core-1.9.jar:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar:/usr/local/hadoop/share/hadoop/common/lib/hadoop-annotations-2.7.4.jar:/usr/local/hadoop/share/hadoop/common/lib/jettison-1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/mockito-all-1.8.5.jar:/usr/local/hadoop/share/hadoop/common/lib/jsch-0.1.54.jar:/usr/local/hadoop/share/hadoop/common/lib/zookeeper-3.4.6.jar:/usr/local/hadoop/share/hadoop/common/lib/hamcrest-core-1.3.jar:/usr/local/hadoop/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-net-3.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jsp-api-2.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-collections-3.2.2.jar:/usr/local/hadoop/share/hadoop/common/lib/guava-11.0.2.jar:/usr/local/hadoop/share/hadoop/common/lib/activation-1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/snappy-java-1.0.4.1.jar:/usr/local/hadoop/share/hadoop/common/lib/api-util-1.0.0-M20.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-util-6.1.26.jar:/usr/local/hadoop/share/hadoop/common/lib/netty-3.6.2.Final.jar:/usr/local/hadoop/share/hadoop/common/lib/htrace-core-3.1.0-incubating.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-codec-1.4.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-configuration-1.6.jar:/usr/local/hadoop/share/hadoop/common/lib/java-xmlbuilder-0.4.jar:/usr/local/hadoop/share/hadoop/common/lib/httpclient-4.2.5.jar:/usr/local/hadoop/share/hadoop/common/lib/api-asn1-api-1.0.0-M20.jar:/usr/local/hadoop/share/hadoop/common/lib/apacheds-i18n-2.0.0-M15.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-httpclient-3.1.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-framework-2.7.1.jar:/usr/local/hadoop/share/hadoop/common/lib/httpcore-4.2.5.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-recipes-2.7.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-json-1.9.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-compress-1.4.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-math3-3.1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-sslengine-6.1.26.jar:/usr/local/hadoop/share/hadoop/common/lib/jaxb-api-2.2.2.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-digester-1.8.jar:/usr/local/hadoop/share/hadoop/common/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hadoop/share/hadoop/common/lib/jets3t-0.9.0.jar:/usr/local/hadoop/share/hadoop/common/lib/avro-1.7.4.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-beanutils-1.7.0.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-6.1.26.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-beanutils-core-1.8.0.jar:/usr/local/hadoop/share/hadoop/common/lib/slf4j-api-1.7.10.jar:/usr/local/hadoop/share/hadoop/common/lib/xmlenc-0.52.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-client-2.7.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-server-1.9.jar:/usr/local/hadoop/share/hadoop/common/lib/paranamer-2.3.jar:/usr/local/hadoop/share/hadoop/common/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/usr/local/hadoop/share/hadoop/common/lib/hadoop-auth-2.7.4.jar:/usr/local/hadoop/share/hadoop/common/lib/asm-3.2.jar:/usr/local/hadoop/share/hadoop/common/lib/junit-4.11.jar:/usr/local/hadoop/share/hadoop/common/hadoop-common-2.7.4.jar:/usr/local/hadoop/share/hadoop/common/hadoop-common-2.7.4-tests.jar:/usr/local/hadoop/share/hadoop/common/hadoop-nfs-2.7.4.jar:/usr/local/hadoop/share/hadoop/hdfs:/usr/local/hadoop/share/hadoop/hdfs/lib/servlet-api-2.5.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-core-1.9.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/guava-11.0.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-util-6.1.26.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/netty-3.6.2.Final.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/htrace-core-3.1.0-incubating.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/netty-all-4.0.23.Final.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/xercesImpl-2.9.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/xml-apis-1.3.04.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-6.1.26.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/xmlenc-0.52.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-server-1.9.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/asm-3.2.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-2.7.4.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-nfs-2.7.4.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-2.7.4-tests.jar:/usr/local/hadoop/share/hadoop/yarn/lib/servlet-api-2.5.jar:/usr/local/hadoop/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/xz-1.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/javax.inject-1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-core-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/zookeeper-3.4.6-tests.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jettison-1.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/aopalliance-1.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/zookeeper-3.4.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-collections-3.2.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guava-11.0.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/activation-1.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/usr/local/hadoop/share/hadoop/yarn/lib/netty-3.6.2.Final.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-codec-1.4.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guice-3.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-json-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-compress-1.4.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-xc-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jetty-6.1.26.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-client-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-server-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/asm-3.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-common-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-common-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-tests-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-registry-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-client-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-api-2.7.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/xz-1.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/javax.inject-1.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/hadoop-annotations-2.7.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/snappy-java-1.0.4.1.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/netty-3.6.2.Final.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/guice-3.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/commons-compress-1.4.1.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/avro-1.7.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/asm-3.2.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/junit-4.11.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.7.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.7.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.7.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.7.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.7.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.7.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.4-tests.jar:/usr/local/hadoop/contrib/capacity-scheduler/*.jar:/usr/local/hadoop/contrib/capacity-scheduler/*.jar:/usr/local/hadoop/contrib/capacity-scheduler/*.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-common-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-common-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-tests-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-registry-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-client-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-api-2.7.4.jar:/usr/local/hadoop/share/hadoop/yarn/lib/servlet-api-2.5.jar:/usr/local/hadoop/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/xz-1.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/javax.inject-1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-core-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/zookeeper-3.4.6-tests.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jettison-1.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/aopalliance-1.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/zookeeper-3.4.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-collections-3.2.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guava-11.0.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/activation-1.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/usr/local/hadoop/share/hadoop/yarn/lib/netty-3.6.2.Final.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-codec-1.4.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guice-3.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-json-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-compress-1.4.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-xc-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jetty-6.1.26.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-client-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-server-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/asm-3.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/usr/local/hadoop/etc/hadoop/rm-config/log4j.properties
+STARTUP_MSG:   build = https://shv@git-wip-us.apache.org/repos/asf/hadoop.git -r cd915e1e8d9d0131462a0b7301586c175728a282; compiled by 'kshvachk' on 2017-08-01T00:29Z
+STARTUP_MSG:   java = 1.8.0_131
+************************************************************/
+2017-10-15 23:54:39,651 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: registered UNIX signal handlers for [TERM, HUP, INT]
+2017-10-15 23:54:40,137 INFO org.apache.hadoop.conf.Configuration: found resource core-site.xml at file:/usr/local/hadoop/etc/hadoop/core-site.xml
+2017-10-15 23:54:40,375 INFO org.apache.hadoop.security.Groups: clearing userToGroupsMap cache
+2017-10-15 23:54:40,536 INFO org.apache.hadoop.conf.Configuration: found resource yarn-site.xml at file:/usr/local/hadoop/etc/hadoop/yarn-site.xml
+2017-10-15 23:54:40,915 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.RMFatalEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$RMFatalEventDispatcher
+2017-10-15 23:54:41,074 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: NMTokenKeyRollingInterval: 86400000ms and NMTokenKeyActivationDelay: 900000ms
+2017-10-15 23:54:41,086 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: ContainerTokenKeyRollingInterval: 86400000ms and ContainerTokenKeyActivationDelay: 900000ms
+2017-10-15 23:54:41,103 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: AMRMTokenKeyRollingInterval: 86400000ms and AMRMTokenKeyActivationDelay: 900000 ms
+2017-10-15 23:54:41,205 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStoreEventType for class org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore$ForwardingEventHandler
+2017-10-15 23:54:41,220 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.NodesListManagerEventType for class org.apache.hadoop.yarn.server.resourcemanager.NodesListManager
+2017-10-15 23:54:41,220 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: Using Scheduler: org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler
+2017-10-15 23:54:41,273 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.scheduler.event.SchedulerEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$SchedulerEventDispatcher
+2017-10-15 23:54:41,281 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.rmapp.RMAppEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$ApplicationEventDispatcher
+2017-10-15 23:54:41,285 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.RMAppAttemptEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$ApplicationAttemptEventDispatcher
+2017-10-15 23:54:41,288 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.rmnode.RMNodeEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$NodeEventDispatcher
+2017-10-15 23:54:41,500 INFO org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2017-10-15 23:54:41,801 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-10-15 23:54:41,801 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ResourceManager metrics system started
+2017-10-15 23:54:41,867 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.RMAppManagerEventType for class org.apache.hadoop.yarn.server.resourcemanager.RMAppManager
+2017-10-15 23:54:41,893 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.amlauncher.AMLauncherEventType for class org.apache.hadoop.yarn.server.resourcemanager.amlauncher.ApplicationMasterLauncher
+2017-10-15 23:54:41,895 INFO org.apache.hadoop.yarn.server.resourcemanager.RMNMInfo: Registered RMNMInfo MBean
+2017-10-15 23:54:41,904 INFO org.apache.hadoop.yarn.security.YarnAuthorizationProvider: org.apache.hadoop.yarn.security.ConfiguredYarnAuthorizer is instiantiated.
+2017-10-15 23:54:41,905 INFO org.apache.hadoop.util.HostsFileReader: Refreshing hosts (include/exclude) list
+2017-10-15 23:54:41,926 INFO org.apache.hadoop.conf.Configuration: found resource capacity-scheduler.xml at file:/usr/local/hadoop/etc/hadoop/capacity-scheduler.xml
+2017-10-15 23:54:42,157 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacitySchedulerConfiguration: max alloc mb per queue for root is undefined
+2017-10-15 23:54:42,161 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacitySchedulerConfiguration: max alloc vcore per queue for root is undefined
+2017-10-15 23:54:42,169 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.ParentQueue: root, capacity=1.0, asboluteCapacity=1.0, maxCapacity=1.0, asboluteMaxCapacity=1.0, state=RUNNING, acls=ADMINISTER_QUEUE:*SUBMIT_APP:*, labels=*,
+, reservationsContinueLooking=true
+2017-10-15 23:54:42,169 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.ParentQueue: Initialized parent-queue root name=root, fullname=root
+2017-10-15 23:54:42,212 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacitySchedulerConfiguration: max alloc mb per queue for root.default is undefined
+2017-10-15 23:54:42,212 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacitySchedulerConfiguration: max alloc vcore per queue for root.default is undefined
+2017-10-15 23:54:42,215 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.LeafQueue: Initializing default
+capacity = 1.0 [= (float) configuredCapacity / 100 ]
+asboluteCapacity = 1.0 [= parentAbsoluteCapacity * capacity ]
+maxCapacity = 1.0 [= configuredMaxCapacity ]
+absoluteMaxCapacity = 1.0 [= 1.0 maximumCapacity undefined, (parentAbsoluteMaxCapacity * maximumCapacity) / 100 otherwise ]
+userLimit = 100 [= configuredUserLimit ]
+userLimitFactor = 1.0 [= configuredUserLimitFactor ]
+maxApplications = 10000 [= configuredMaximumSystemApplicationsPerQueue or (int)(configuredMaximumSystemApplications * absoluteCapacity)]
+maxApplicationsPerUser = 10000 [= (int)(maxApplications * (userLimit / 100.0f) * userLimitFactor) ]
+usedCapacity = 0.0 [= usedResourcesMemory / (clusterResourceMemory * absoluteCapacity)]
+absoluteUsedCapacity = 0.0 [= usedResourcesMemory / clusterResourceMemory]
+maxAMResourcePerQueuePercent = 0.1 [= configuredMaximumAMResourcePercent ]
+minimumAllocationFactor = 0.875 [= (float)(maximumAllocationMemory - minimumAllocationMemory) / maximumAllocationMemory ]
+maximumAllocation = <memory:8192, vCores:32> [= configuredMaxAllocation ]
+numContainers = 0 [= currentNumContainers ]
+state = RUNNING [= configuredState ]
+acls = ADMINISTER_QUEUE:*SUBMIT_APP:* [= configuredAcls ]
+nodeLocalityDelay = 40
+labels=*,
+nodeLocalityDelay = 40
+reservationsContinueLooking = true
+preemptionDisabled = true
+
+2017-10-15 23:54:42,215 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler: Initialized queue: default: capacity=1.0, absoluteCapacity=1.0, usedResources=<memory:0, vCores:0>, usedCapacity=0.0, absoluteUsedCapacity=0.0, numApps=0, numContainers=0
+2017-10-15 23:54:42,215 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler: Initialized queue: root: numChildQueue= 1, capacity=1.0, absoluteCapacity=1.0, usedResources=<memory:0, vCores:0>usedCapacity=0.0, numApps=0, numContainers=0
+2017-10-15 23:54:42,216 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler: Initialized root queue root: numChildQueue= 1, capacity=1.0, absoluteCapacity=1.0, usedResources=<memory:0, vCores:0>usedCapacity=0.0, numApps=0, numContainers=0
+2017-10-15 23:54:42,221 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler: Initialized queue mappings, override: false
+2017-10-15 23:54:42,221 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler: Initialized CapacityScheduler with calculator=class org.apache.hadoop.yarn.util.resource.DefaultResourceCalculator, minimumAllocation=<<memory:1024, vCores:1>>, maximumAllocation=<<memory:8192, vCores:32>>, asynchronousScheduling=false, asyncScheduleInterval=5ms
+2017-10-15 23:54:42,264 INFO org.apache.hadoop.yarn.server.resourcemanager.metrics.SystemMetricsPublisher: YARN system metrics publishing service is not enabled
+2017-10-15 23:54:42,264 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: Transitioning to active state
+2017-10-15 23:54:42,314 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-15 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Rolling master-key for container-tokens
+2017-10-15 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Rolling master-key for nm-tokens
+2017-10-15 23:54:42,320 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-15 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 1
+2017-10-15 23:54:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2017-10-15 23:54:42,332 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Starting expired delegation token remover thread, tokenRemoverScanInterval=60 min(s)
+2017-10-15 23:54:42,332 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-15 23:54:42,332 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 2
+2017-10-15 23:54:42,332 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2017-10-15 23:54:42,360 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.nodelabels.event.NodeLabelsStoreEventType for class org.apache.hadoop.yarn.nodelabels.CommonNodeLabelsManager$ForwardingEventHandler
+2017-10-15 23:54:42,460 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue queueCapacity: 5000
+2017-10-15 23:54:42,517 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 8031
+2017-10-15 23:54:43,062 INFO org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.yarn.server.api.ResourceTrackerPB to the server
+2017-10-15 23:54:43,072 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2017-10-15 23:54:43,082 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 8031: starting
+2017-10-15 23:54:43,277 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue queueCapacity: 5000
+2017-10-15 23:54:43,310 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 8030
+2017-10-15 23:54:43,364 INFO org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.yarn.api.ApplicationMasterProtocolPB to the server
+2017-10-15 23:54:43,367 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2017-10-15 23:54:43,509 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 8030: starting
+2017-10-15 23:54:43,663 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue queueCapacity: 5000
+2017-10-15 23:54:43,668 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 8032
+2017-10-15 23:54:43,692 INFO org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.yarn.api.ApplicationClientProtocolPB to the server
+2017-10-15 23:54:43,698 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2017-10-15 23:54:43,751 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 8032: starting
+2017-10-15 23:54:43,855 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: Transitioned to active state
+2017-10-15 23:54:44,123 INFO org.mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-10-15 23:54:44,147 INFO org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2017-10-15 23:54:44,167 INFO org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.resourcemanager is not defined
+2017-10-15 23:54:44,184 INFO org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2017-10-15 23:54:44,205 INFO org.apache.hadoop.http.HttpServer2: Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context cluster
+2017-10-15 23:54:44,205 INFO org.apache.hadoop.http.HttpServer2: Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context logs
+2017-10-15 23:54:44,205 INFO org.apache.hadoop.http.HttpServer2: Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context static
+2017-10-15 23:54:44,205 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context cluster
+2017-10-15 23:54:44,205 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2017-10-15 23:54:44,205 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2017-10-15 23:54:44,219 INFO org.apache.hadoop.http.HttpServer2: adding path spec: /cluster/*
+2017-10-15 23:54:44,219 INFO org.apache.hadoop.http.HttpServer2: adding path spec: /ws/*
+2017-10-15 23:54:45,837 INFO org.apache.hadoop.yarn.webapp.WebApps: Registered webapp guice modules
+2017-10-15 23:54:45,839 INFO org.apache.hadoop.http.HttpServer2: Jetty bound to port 8088
+2017-10-15 23:54:45,839 INFO org.mortbay.log: jetty-6.1.26
+2017-10-15 23:54:45,843 INFO org.apache.hadoop.yarn.util.RackResolver: Resolved ip-172-31-17-21.us-west-2.compute.internal to /default-rack
+2017-10-15 23:54:45,843 INFO org.apache.hadoop.yarn.util.RackResolver: Resolved ip-172-31-23-236.us-west-2.compute.internal to /default-rack
+2017-10-15 23:54:45,857 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceTrackerService: NodeManager from node ip-172-31-23-236.us-west-2.compute.internal(cmPort: 36120 httpPort: 8042) registered with capability: <memory:8192, vCores:8>, assigned nodeId ip-172-31-23-236.us-west-2.compute.internal:36120
+2017-10-15 23:54:45,858 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceTrackerService: NodeManager from node ip-172-31-17-21.us-west-2.compute.internal(cmPort: 45700 httpPort: 8042) registered with capability: <memory:8192, vCores:8>, assigned nodeId ip-172-31-17-21.us-west-2.compute.internal:45700
+2017-10-15 23:54:46,006 INFO org.mortbay.log: Extract jar:file:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-common-2.7.4.jar!/webapps/cluster to /tmp/Jetty_ec2.52.40.46.82_us.west.2_compute_amazonaws_com_8088_cluster____escyxb/webapp
+2017-10-15 23:54:46,582 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-15 23:54:46,584 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Starting expired delegation token remover thread, tokenRemoverScanInterval=60 min(s)
+2017-10-15 23:54:46,584 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-15 23:54:51,521 INFO org.mortbay.log: Started HttpServer2$SelectChannelConnectorWithSafeStartup@ec2-52-40-46-82.us-west-2.compute.amazonaws.com:8088
+2017-10-15 23:54:51,521 INFO org.apache.hadoop.yarn.webapp.WebApps: Web app cluster started at 8088
+2017-10-15 23:54:51,553 INFO org.apache.hadoop.yarn.server.resourcemanager.rmnode.RMNodeImpl: ip-172-31-23-236.us-west-2.compute.internal:36120 Node Transitioned from NEW to RUNNING
+2017-10-15 23:54:51,553 INFO org.apache.hadoop.yarn.server.resourcemanager.rmnode.RMNodeImpl: ip-172-31-17-21.us-west-2.compute.internal:45700 Node Transitioned from NEW to RUNNING
+2017-10-15 23:54:51,588 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler: Added node ip-172-31-23-236.us-west-2.compute.internal:36120 clusterResource: <memory:8192, vCores:8>
+2017-10-15 23:54:51,589 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler: Added node ip-172-31-17-21.us-west-2.compute.internal:45700 clusterResource: <memory:16384, vCores:16>
+2017-10-15 23:54:51,700 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue queueCapacity: 100
+2017-10-15 23:54:51,708 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 8033
+2017-10-15 23:54:51,722 INFO org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.yarn.server.api.ResourceManagerAdministrationProtocolPB to the server
+2017-10-15 23:54:51,748 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2017-10-15 23:54:51,756 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 8033: starting
+2017-10-15 23:54:54,292 INFO org.apache.hadoop.yarn.util.RackResolver: Resolved ip-172-31-30-102.us-west-2.compute.internal to /default-rack
+2017-10-15 23:54:54,292 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceTrackerService: NodeManager from node ip-172-31-30-102.us-west-2.compute.internal(cmPort: 34621 httpPort: 8042) registered with capability: <memory:8192, vCores:8>, assigned nodeId ip-172-31-30-102.us-west-2.compute.internal:34621
+2017-10-15 23:54:54,292 INFO org.apache.hadoop.yarn.server.resourcemanager.rmnode.RMNodeImpl: ip-172-31-30-102.us-west-2.compute.internal:34621 Node Transitioned from NEW to RUNNING
+2017-10-15 23:54:54,293 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler: Added node ip-172-31-30-102.us-west-2.compute.internal:34621 clusterResource: <memory:24576, vCores:24>
+2017-10-16 00:04:41,926 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.AbstractYarnScheduler: Release request cache is cleaned up
+2017-10-16 23:54:42,314 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Rolling master-key for amrm-tokens
+2017-10-16 23:54:42,315 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-16 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Rolling master-key for container-tokens
+2017-10-16 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Going to activate master-key with key-id 1305979283 in 900000ms
+2017-10-16 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Rolling master-key for nm-tokens
+2017-10-16 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Going to activate master-key with key-id -1798964885 in 900000ms
+2017-10-16 23:54:45,278 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-16 23:54:45,279 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 3
+2017-10-16 23:54:45,279 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2017-10-16 23:54:49,530 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-17 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Activating next master key with id: -423018775
+2017-10-17 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-17 00:09:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Activating next master key with id: 1305979283
+2017-10-17 00:09:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Activating next master key with id: -1798964885
+2017-10-17 23:54:42,314 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Rolling master-key for amrm-tokens
+2017-10-17 23:54:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-17 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Rolling master-key for container-tokens
+2017-10-17 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Going to activate master-key with key-id 1305979284 in 900000ms
+2017-10-17 23:54:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Rolling master-key for nm-tokens
+2017-10-17 23:54:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Going to activate master-key with key-id -1798964884 in 900000ms
+2017-10-17 23:54:48,214 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-17 23:54:48,214 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 4
+2017-10-17 23:54:48,214 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2017-10-17 23:54:52,433 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-18 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Activating next master key with id: -423018774
+2017-10-18 00:09:42,317 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-18 00:09:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Activating next master key with id: 1305979284
+2017-10-18 00:09:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Activating next master key with id: -1798964884
+2017-10-18 23:54:42,314 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Rolling master-key for amrm-tokens
+2017-10-18 23:54:42,315 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-18 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Rolling master-key for container-tokens
+2017-10-18 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Going to activate master-key with key-id 1305979285 in 900000ms
+2017-10-18 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Rolling master-key for nm-tokens
+2017-10-18 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Going to activate master-key with key-id -1798964883 in 900000ms
+2017-10-18 23:54:51,165 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-18 23:54:51,166 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 5
+2017-10-18 23:54:51,166 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2017-10-18 23:54:55,202 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-19 00:09:42,315 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Activating next master key with id: -423018773
+2017-10-19 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-19 00:09:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Activating next master key with id: 1305979285
+2017-10-19 00:09:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Activating next master key with id: -1798964883
+2017-10-19 23:54:42,314 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Rolling master-key for amrm-tokens
+2017-10-19 23:54:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-19 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Rolling master-key for container-tokens
+2017-10-19 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Going to activate master-key with key-id 1305979286 in 900000ms
+2017-10-19 23:54:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Rolling master-key for nm-tokens
+2017-10-19 23:54:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Going to activate master-key with key-id -1798964882 in 900000ms
+2017-10-19 23:54:53,977 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-19 23:54:53,977 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 6
+2017-10-19 23:54:53,978 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2017-10-19 23:54:58,005 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-20 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Activating next master key with id: -423018772
+2017-10-20 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-20 00:09:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Activating next master key with id: 1305979286
+2017-10-20 00:09:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Activating next master key with id: -1798964882
+2017-10-20 23:54:42,315 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Rolling master-key for amrm-tokens
+2017-10-20 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Rolling master-key for container-tokens
+2017-10-20 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Rolling master-key for nm-tokens
+2017-10-20 23:54:42,324 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Going to activate master-key with key-id -1798964881 in 900000ms
+2017-10-20 23:54:42,324 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Going to activate master-key with key-id 1305979287 in 900000ms
+2017-10-20 23:54:42,324 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-20 23:54:56,922 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-20 23:54:56,923 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 7
+2017-10-20 23:54:56,923 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2017-10-20 23:55:00,959 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-21 00:09:42,324 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Activating next master key with id: -1798964881
+2017-10-21 00:09:42,324 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Activating next master key with id: 1305979287
+2017-10-21 00:09:42,324 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Activating next master key with id: -423018771
+2017-10-21 00:09:42,324 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-21 23:54:42,314 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Rolling master-key for amrm-tokens
+2017-10-21 23:54:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-21 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Rolling master-key for container-tokens
+2017-10-21 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Going to activate master-key with key-id 1305979288 in 900000ms
+2017-10-21 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Rolling master-key for nm-tokens
+2017-10-21 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Going to activate master-key with key-id -1798964880 in 900000ms
+2017-10-21 23:54:59,683 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-21 23:54:59,683 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 8
+2017-10-21 23:54:59,683 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2017-10-21 23:55:03,753 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-22 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Activating next master key with id: -423018770
+2017-10-22 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-22 00:09:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Activating next master key with id: 1305979288
+2017-10-22 00:09:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Activating next master key with id: -1798964880
+2017-10-22 23:54:42,314 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Rolling master-key for amrm-tokens
+2017-10-22 23:54:42,315 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-22 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Rolling master-key for container-tokens
+2017-10-22 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Going to activate master-key with key-id 1305979289 in 900000ms
+2017-10-22 23:54:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Rolling master-key for nm-tokens
+2017-10-22 23:54:42,322 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Going to activate master-key with key-id -1798964879 in 900000ms
+2017-10-22 23:55:02,430 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: removing master key with keyID 1
+2017-10-22 23:55:02,430 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Removing RMDTMasterKey.
+2017-10-22 23:55:02,430 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-22 23:55:02,430 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 9
+2017-10-22 23:55:02,430 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2017-10-22 23:55:06,512 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-23 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Activating next master key with id: -423018769
+2017-10-23 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-23 00:09:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Activating next master key with id: 1305979289
+2017-10-23 00:09:42,322 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Activating next master key with id: -1798964879
+2017-10-23 23:54:42,314 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Rolling master-key for amrm-tokens
+2017-10-23 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Rolling master-key for container-tokens
+2017-10-23 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Going to activate master-key with key-id 1305979290 in 900000ms
+2017-10-23 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Rolling master-key for nm-tokens
+2017-10-23 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Going to activate master-key with key-id -1798964878 in 900000ms
+2017-10-23 23:54:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-23 23:55:05,188 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: removing master key with keyID 2
+2017-10-23 23:55:05,188 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Removing RMDTMasterKey.
+2017-10-23 23:55:05,188 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-23 23:55:05,188 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 10
+2017-10-23 23:55:05,188 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2017-10-23 23:55:09,303 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-24 00:09:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Activating next master key with id: 1305979290
+2017-10-24 00:09:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Activating next master key with id: -1798964878
+2017-10-24 00:09:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Activating next master key with id: -423018768
+2017-10-24 00:09:42,322 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-24 23:54:42,314 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Rolling master-key for amrm-tokens
+2017-10-24 23:54:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-24 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Rolling master-key for container-tokens
+2017-10-24 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Going to activate master-key with key-id 1305979291 in 900000ms
+2017-10-24 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Rolling master-key for nm-tokens
+2017-10-24 23:54:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Going to activate master-key with key-id -1798964877 in 900000ms
+2017-10-24 23:55:07,952 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: removing master key with keyID 3
+2017-10-24 23:55:07,953 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Removing RMDTMasterKey.
+2017-10-24 23:55:07,953 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-24 23:55:07,953 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 11
+2017-10-24 23:55:07,953 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2017-10-24 23:55:12,108 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-25 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Activating next master key with id: -423018767
+2017-10-25 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-25 00:09:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Activating next master key with id: 1305979291
+2017-10-25 00:09:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Activating next master key with id: -1798964877
+2017-10-25 23:54:42,314 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Rolling master-key for amrm-tokens
+2017-10-25 23:54:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-25 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Rolling master-key for container-tokens
+2017-10-25 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Going to activate master-key with key-id 1305979292 in 900000ms
+2017-10-25 23:54:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Rolling master-key for nm-tokens
+2017-10-25 23:54:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Going to activate master-key with key-id -1798964876 in 900000ms
+2017-10-25 23:55:10,732 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: removing master key with keyID 4
+2017-10-25 23:55:10,732 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Removing RMDTMasterKey.
+2017-10-25 23:55:10,732 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-25 23:55:10,732 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 12
+2017-10-25 23:55:10,732 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2017-10-25 23:55:14,921 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-26 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Activating next master key with id: -423018766
+2017-10-26 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-26 00:09:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Activating next master key with id: 1305979292
+2017-10-26 00:09:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Activating next master key with id: -1798964876
+2017-10-26 23:54:42,314 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Rolling master-key for amrm-tokens
+2017-10-26 23:54:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-26 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Rolling master-key for container-tokens
+2017-10-26 23:54:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Going to activate master-key with key-id 1305979293 in 900000ms
+2017-10-26 23:54:42,320 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Rolling master-key for nm-tokens
+2017-10-26 23:54:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Going to activate master-key with key-id -1798964875 in 900000ms
+2017-10-26 23:55:13,474 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: removing master key with keyID 5
+2017-10-26 23:55:13,474 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Removing RMDTMasterKey.
+2017-10-26 23:55:13,475 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-26 23:55:13,475 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 13
+2017-10-26 23:55:13,475 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2017-10-26 23:55:17,705 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-10-27 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: Activating next master key with id: -423018765
+2017-10-27 00:09:42,316 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2017-10-27 00:09:42,319 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Activating next master key with id: 1305979293
+2017-10-27 00:09:42,321 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Activating next master key with id: -1798964875
+2017-10-27 21:16:28,534 ERROR org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: RECEIVED SIGNAL 15: SIGTERM
+2017-10-27 21:16:28,555 ERROR org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: ExpiredTokenRemover received java.lang.InterruptedException: sleep interrupted
+2017-10-27 21:16:28,564 INFO org.mortbay.log: Stopped HttpServer2$SelectChannelConnectorWithSafeStartup@ec2-52-40-46-82.us-west-2.compute.amazonaws.com:8088
+2017-10-27 21:16:28,566 INFO org.apache.hadoop.ipc.Server: Stopping server on 8032
+2017-10-27 21:16:28,572 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 8032
+2017-10-27 21:16:28,572 INFO org.apache.hadoop.ipc.Server: Stopping server on 8033
+2017-10-27 21:16:28,572 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+2017-10-27 21:16:28,573 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 8033
+2017-10-27 21:16:28,573 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: Transitioning to standby state
+2017-10-27 21:16:28,573 WARN org.apache.hadoop.yarn.server.resourcemanager.amlauncher.ApplicationMasterLauncher: org.apache.hadoop.yarn.server.resourcemanager.amlauncher.ApplicationMasterLauncher$LauncherThread interrupted. Returning.
+2017-10-27 21:16:28,574 INFO org.apache.hadoop.ipc.Server: Stopping server on 8030
+2017-10-27 21:16:28,581 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+2017-10-27 21:16:28,581 INFO org.apache.hadoop.ipc.Server: Stopping server on 8031
+2017-10-27 21:16:28,585 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 8031
+2017-10-27 21:16:28,586 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 8030
+2017-10-27 21:16:28,586 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+2017-10-27 21:16:28,587 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+2017-10-27 21:16:28,587 INFO org.apache.hadoop.yarn.util.AbstractLivelinessMonitor: NMLivelinessMonitor thread interrupted
+2017-10-27 21:16:28,587 ERROR org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: Returning, interrupted : java.lang.InterruptedException
+2017-10-27 21:16:28,587 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: AsyncDispatcher is draining to stop, igonring any new events.
+2017-10-27 21:16:28,587 INFO org.apache.hadoop.yarn.util.AbstractLivelinessMonitor: AMLivelinessMonitor thread interrupted
+2017-10-27 21:16:28,588 INFO org.apache.hadoop.yarn.util.AbstractLivelinessMonitor: AMLivelinessMonitor thread interrupted
+2017-10-27 21:16:28,588 INFO org.apache.hadoop.yarn.util.AbstractLivelinessMonitor: org.apache.hadoop.yarn.server.resourcemanager.rmcontainer.ContainerAllocationExpirer thread interrupted
+2017-10-27 21:16:28,588 ERROR org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: ExpiredTokenRemover received java.lang.InterruptedException: sleep interrupted
+2017-10-27 21:16:28,589 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping ResourceManager metrics system...
+2017-10-27 21:16:28,598 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ResourceManager metrics system stopped.
+2017-10-27 21:16:28,598 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ResourceManager metrics system shutdown complete.
+2017-10-27 21:16:28,598 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: AsyncDispatcher is draining to stop, igonring any new events.
+2017-10-27 21:16:28,598 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: Transitioned to standby state
+2017-10-27 21:16:28,598 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down ResourceManager at ip-172-31-30-102/172.31.30.102
+************************************************************/
