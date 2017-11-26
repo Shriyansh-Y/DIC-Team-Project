@@ -48,7 +48,7 @@ class Consumer(multiprocessing.Process):
         consumer.subscribe(['blackfriday'])
 
         while not self.stop_event.is_set():
-            with table.batch_writer() as batch:
+            with table.batch_writer(overwrite_by_pkeys=['id', 'keyword']) as batch:
                 for message in consumer:
                     # print(message.topic, message.key.decode("utf-8"), message.value.decode("utf-8"))
                     batch.put_item(
@@ -78,7 +78,7 @@ c = Consumer()
 p.start()
 c.start()
 
-time.sleep(2400)
+time.sleep(1800)
 
 producer.close()
 p.stop()
