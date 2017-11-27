@@ -7,10 +7,10 @@ dynamodb = boto3.resource('dynamodb', region_name='us-east-2')
 
 table = dynamodb.Table('Tweets')
 id = '12345'
-keyword = 'lstest'
+hashtags = ['lstest', 'lishi']
 text = 'Test by Li'
 
-table.put_item(Item={'id':id, 'keyword': keyword, 'text': text})
+table.put_item(Item={'id':id, 'hashtags': hashtags, 'text': text})
 
 
 print(table.creation_date_time)

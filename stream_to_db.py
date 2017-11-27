@@ -1,6 +1,7 @@
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
+import umsgpack
 
 import threading
 import time
@@ -26,7 +27,10 @@ class StdOutListener(StreamListener):
         except AttributeError:
             text = status.text
         i = str(status.id)
-        producer.send('blackfriday', key=i.encode("utf-8"), value=text.encode("utf-8"))
+        tags = [t['text'] for t in status.entities['hashtags']]
+        if tags:
+            v = umsgpack.packb([tags, text])
+            producer.send('topic_ls0', key=i.encode('utf-8'), value=v)
         return True
 
     def on_error(self, status):
@@ -45,17 +49,18 @@ class Consumer(multiprocessing.Process):
         consumer = KafkaConsumer(bootstrap_servers=['localhost:9092'],
                                  auto_offset_reset='earliest',
                                  consumer_timeout_ms=1000)
-        consumer.subscribe(['blackfriday'])
+        consumer.subscribe(['topic_ls0'])
 
         while not self.stop_event.is_set():
-            with table.batch_writer(overwrite_by_pkeys=['id', 'keyword']) as batch:
+            with table.batch_writer(overwrite_by_pkeys=['id']) as batch:
                 for message in consumer:
-                    # print(message.topic, message.key.decode("utf-8"), message.value.decode("utf-8"))
+                    # print(message.topic, message.key.decode("utf-8"), umsgpack.unpackb(message.value))
+                    tags, text = umsgpack.unpackb(message.value)
                     batch.put_item(
                         Item={
                             'id': message.key.decode("utf-8"),
-                            'keyword': message.topic,
-                            'text': message.value.decode("utf-8")
+                            'hashtags': tags,
+                            'text': text
                         }
                     )
                     if self.stop_event.is_set():
@@ -69,7 +74,7 @@ def stream():
     auth.set_access_token(access_token, access_token_secret)
     l = StdOutListener()
     stream = Stream(auth, l)
-    stream.filter(track=["blackfriday"])
+    stream.filter(track=["#"])
 
 
 producer = KafkaProducer(bootstrap_servers=['localhost:9092'])
@@ -78,10 +83,9 @@ c = Consumer()
 p.start()
 c.start()
 
-time.sleep(1800)
+time.sleep(600)
 
 producer.close()
-p.stop()
 c.stop()
 p.join()
 c.join()
