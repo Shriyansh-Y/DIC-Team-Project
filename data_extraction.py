@@ -1,4 +1,5 @@
-from tweepy.streaming import StreamListener
+import tweepy
+from tweepy import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 from kafka import SimpleProducer, KafkaClient

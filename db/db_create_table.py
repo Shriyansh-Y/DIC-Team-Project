@@ -5,7 +5,7 @@ dynamodb = boto3.resource('dynamodb', region_name='us-east-2')
 
 
 table = dynamodb.create_table(
-    TableName='Tweets',
+    TableName='Tweets2',
     KeySchema=[
         {
             'AttributeName': 'id',
@@ -20,8 +20,8 @@ table = dynamodb.create_table(
 
     ],
     ProvisionedThroughput={
-        'ReadCapacityUnits': 50,
-        'WriteCapacityUnits': 50
+        'ReadCapacityUnits': 100,
+        'WriteCapacityUnits': 100
     }
 )
 
