@@ -1,3 +1,5 @@
 NameNode -  ec2-34-213-100-244.us-west-2.compute.amazonaws.com	
 DataNode1 - ec2-52-37-3-212.us-west-2.compute.amazonaws.com	
 DataNode2 - ec2-34-216-106-155.us-west-2.compute.amazonaws.com	
+
+emr master node: hadoop@ec2-54-236-25-154.compute-1.amazonaws.com
