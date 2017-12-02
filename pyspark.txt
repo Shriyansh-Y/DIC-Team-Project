@@ -1,0 +1,12 @@
+%pyspark --jars /usr/share/aws/emr/ddb/lib/emr-ddb-hadoop.jar
+
+from pyspark.context import SparkContext
+from pyspark import SparkConf
+
+sc = SparkContext.getOrCreate()
+
+conf = {"dynamodb.servicename": "dynamodb", "dynamodb.input.tableName": "Movies", "dynamodb.endpoint": "https://dynamodb.us-east-2.amazonaws.com", "dynamodb.regionid":"us-east-2", "mapred.input.format.class":"org.apache.hadoop.dynamodb.read.DynamoDBInputFormat","mapred.output.format.class":"org.apache.hadoop.dynamodb.write.DynamoDBOutputFormat", "mapred.max.split.size": "4"}
+
+orders  = sc.hadoopRDD(inputFormatClass="org.apache.hadoop.dynamodb.read.DynamoDBInputFormat", keyClass="org.apache.hadoop.io.Text", valueClass="org.apache.hadoop.dynamodb.DynamoDBItemWritable", conf=conf)
+
+
