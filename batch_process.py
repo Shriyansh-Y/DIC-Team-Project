@@ -46,7 +46,7 @@ textmap = text.map(lambda x: (extract_hashtag(x[1].split("\x03")[1]), (x[1].spli
 
 tweetmap = textmap.map(lambda x: (x[0], check_sentiment(x[1])))
 
-hashtagmap = tweetmap.flatMap(lambda x: ((y[1:-1],x[1]) for y in x[0] ))
+hashtagmap = tweetmap.flatMap(lambda x: ((str(y[1:-1].decode('ascii','ignore')),x[1]) for y in x[0] ))
 
 r = hashtagmap.map(lambda x: x).reduceByKey(lambda m, n: [m[0] + n[0], m[1] + n[1]])
 
