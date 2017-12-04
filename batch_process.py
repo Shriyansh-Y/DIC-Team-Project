@@ -8,6 +8,15 @@ sc = SparkContext.getOrCreate()
 hiveCtx = HiveContext(sc)
 
 
+def load_wordlist(filename):
+    with open(filename,'r') as f:
+        lines = f.read().splitlines()
+    return lines
+
+
+pwords = load_wordlist('positive.txt')
+nwords = load_wordlist('negative.txt')
+
 
 
 def extract_hashtag(ht):
@@ -18,7 +27,16 @@ def extract_hashtag(ht):
 	return hashtags
 
 def check_sentiment(tweet):
-    return [1,0]
+    count = 0
+    for word in tweet:
+        if word in pwords:
+            count += 1
+        else:
+            count -= 1
+    if count >=0:
+        return [1,0]
+    else:
+        return [0,1]
 
 
 text = sc.hadoopFile('abc.txt', "org.apache.hadoop.mapred.TextInputFormat", "org.apache.hadoop.io.Text", "org.apache.hadoop.io.LongWritable")
@@ -36,7 +54,7 @@ r = hashtagmap.map(lambda x: x).reduceByKey(lambda m, n: [m[0] + n[0], m[1] + n[
 df = r.map(lambda x: Row(hashtag=x[0], pos=x[1][0], neg=x[1][1])).toDF(['hashtag', 'pos', 'neg'])
 df.registerTempTable("temp_t")
 aggRDD = hiveCtx.sql("select * from temp_t")
-aggRDD.write.saveAsTable("test_result")
+aggRDD.write.saveAsTable("tweet")
 
 
-textmap.saveAsTextFile('test/test1.csv')
+#textmap.saveAsTextFile('test/test1.csv')
