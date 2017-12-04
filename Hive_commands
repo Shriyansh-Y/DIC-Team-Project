@@ -1,0 +1,22 @@
+
+// creating an external table from dynamodb table
+
+CREATE EXTERNAL TABLE ddb_features_no_mapping 
+    (item MAP<STRING, STRING>)
+STORED BY 'org.apache.hadoop.hive.dynamodb.DynamoDBStorageHandler' 
+TBLPROPERTIES ("dynamodb.table.name" = "Features", "dynamodb.region" = "us-east-2");
+
+// creating external table linked to hdfs
+CREATE EXTERNAL TABLE hdfs_features_no_mapping 
+    (item MAP<STRING, STRING>)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+LINES TERMINATED BY '\n'
+LOCATION 'hdfs:///user/hadoop/hive-test';
+
+
+// overwrite hdfs file table
+INSERT OVERWRITE TABLE hdfs_features_no_mapping
+SELECT * FROM ddb_features_no_mapping;
+
+
