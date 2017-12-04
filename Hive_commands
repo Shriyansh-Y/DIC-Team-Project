@@ -19,4 +19,20 @@ LOCATION 'hdfs:///user/hadoop/hive-test';
 INSERT OVERWRITE TABLE hdfs_features_no_mapping
 SELECT * FROM ddb_features_no_mapping;
 
+//#################  Write DynamoDB from HDFS
 
+// creating external table linked to DynamoDB
+CREATE EXTERNAL TABLE ddb_features
+    (hashtag      STRING,
+     pos          BIGINT,
+     neg          BIGINT)
+STORED BY 'org.apache.hadoop.hive.dynamodb.DynamoDBStorageHandler'
+TBLPROPERTIES(
+    "dynamodb.table.name" = "results",
+    "dynamodb.region" = "us-east-2",
+    "dynamodb.column.mapping"="feature_id:Id,feature_name:Name,feature_class:Class,state_alpha:State,prim_lat_dec:Latitude,prim_long_dec:Longitude,elev_in_ft:Elevation"
+);
+
+// overwrite dynamo table
+INSERT OVERWRITE TABLE results 
+SELECT * FROM hive_features;
