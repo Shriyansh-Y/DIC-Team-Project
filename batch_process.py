@@ -17,6 +17,8 @@ def load_wordlist(filename):
 pwords = load_wordlist('positive.txt')
 nwords = load_wordlist('negative.txt')
 
+pwords = set(pwords)
+nwords = set(nwords)
 
 
 def extract_hashtag(ht):
