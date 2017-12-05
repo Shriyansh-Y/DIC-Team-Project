@@ -34,5 +34,5 @@ TBLPROPERTIES(
 );
 
 // overwrite dynamo table
-INSERT OVERWRITE TABLE results 
+INSERT OVERWRITE TABLE ddb_features 
 SELECT * FROM hive_features;
